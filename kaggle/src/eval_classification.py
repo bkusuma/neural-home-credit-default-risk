@@ -1,6 +1,27 @@
 def eval_classification(model, X_train, y_train, X_test, y_test, model_name="model", results_frame=None,
                         pos_label=1, average="binary", roc_auc_average="macro"):
     
+    """Evaluate the classification performance of a machine learning model using various metrics.
+    
+    This function trains and evaluates a given classification model on both training and test datasets. It prints side-by-
+    side classification reports for train and test sets and displays normalized confusion matrices. Additionally, it
+    calculates and returns various evaluation metrics such as accuracy, precision, recall, F1-score, and ROC-AUC score.
+    
+    Args:
+        model (Classifier): The machine learning model to be evaluated.
+        X_train (array-like): Training features.
+        y_train (array-like): Training labels.
+        X_test (array-like): Test features.
+        y_test (array-like): Test labels.
+        model_name (str?): Name of the model. Defaults to "model".
+        results_frame (DataFrame?): DataFrame to store previous results. Defaults to None.
+        pos_label (int?): Positive label for binary classification. Defaults to 1.
+        average (str?): Method of averaging for multiclass problems. Defaults to "binary".
+        roc_auc_average (str?): Method of averaging for ROC-AUC score in multiclass problems. Defaults to "macro".
+    
+    Returns:
+        DataFrame: A pandas DataFrame containing the evaluation metrics.
+    """
     from sklearn.metrics import (accuracy_score, precision_score, recall_score, 
                                  f1_score, classification_report, ConfusionMatrixDisplay, 
                                  roc_auc_score)
@@ -13,6 +34,19 @@ def eval_classification(model, X_train, y_train, X_test, y_test, model_name="mod
     
     # create function to print classification reports (which are strings) side by side
     def side_by_side(strings, size=54, space=1):
+        """Create a function to print classification reports side by side.
+        
+        This function takes a list of strings, each representing a classification report, and prints them side by side in a
+        formatted manner. Each string is truncated to a specified size, and lines are joined with a given space.
+        
+        Args:
+            strings (list): A list of strings containing classification reports.
+            size (int?): The maximum width of each line in the output. Defaults to 54.
+            space (int?): The number of spaces between columns in the output. Defaults to 1.
+        
+        Returns:
+            str: A string representing the side-by-side formatted classification reports.
+        """
         strings = list(strings)
         result = []
 
