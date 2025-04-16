@@ -34,15 +34,15 @@ def eval_classification(model, X_train, y_train, X_test, y_test, model_name="mod
     
     # create function to print classification reports (which are strings) side by side
     def side_by_side(strings, size=54, space=1):
-        """Create a function to print classification reports side by side.
+        """Print classification reports side by side.
         
         This function takes a list of strings, each representing a classification report, and prints them side by side in a
         formatted manner. Each string is truncated to a specified size, and lines are joined with a given space.
         
         Args:
             strings (list): A list of strings containing classification reports.
-            size (int?): The maximum width of each line in the output. Defaults to 54.
-            space (int?): The number of spaces between columns in the output. Defaults to 1.
+            size (int??): The maximum width of each line in the output. Defaults to 54.
+            space (int??): The number of spaces between columns in the output. Defaults to 1.
         
         Returns:
             str: A string representing the side-by-side formatted classification reports.
