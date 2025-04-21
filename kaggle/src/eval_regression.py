@@ -10,7 +10,7 @@ def eval_regression(model, X_train, y_train, name='model'):
         model (object): A trained regression model.
         X_train (array-like): Training data features.
         y_train (array-like): Training data targets.
-        name (str??): Name of the model for the results DataFrame. Defaults to 'model'.
+        name (str?): Name of the model for the results DataFrame. Defaults to 'model'.
     
     Returns:
         pandas.DataFrame: A DataFrame containing the calculated metrics.
