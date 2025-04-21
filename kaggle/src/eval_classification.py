@@ -41,8 +41,8 @@ def eval_classification(model, X_train, y_train, X_test, y_test, model_name="mod
         
         Args:
             strings (list): A list of strings containing classification reports.
-            size (int??): The maximum width of each line in the output. Defaults to 54.
-            space (int??): The number of spaces between columns in the output. Defaults to 1.
+            size (int): The maximum width of each line in the output. Defaults to 54.
+            space (int): The number of spaces between columns in the output. Defaults to 1.
         
         Returns:
             str: A string representing the side-by-side formatted classification reports.
